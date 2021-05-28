@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        <h3>Here are users inforamtion</h3>
+        <div>
+            <table>
+                {% for up in users_info %}
+                <ul>
+                    <li>User number:{{up.id}}</li>
+                    <li>First Name:{{up.first_name}}</li>
+                    <li>Last Name:{{up.last_name}}</li>
+                    <li>Email:{{up.email}}</li>
+                </ul>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
